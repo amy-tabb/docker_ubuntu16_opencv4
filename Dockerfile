@@ -11,5 +11,5 @@ WORKDIR opencv/build
 
 RUN /bin/sh ./../../build_opencv.sh
 
-WORKDIR opencv/build
+WORKDIR /
 #do not remove directory, because will use this image for building the contrib module as well.

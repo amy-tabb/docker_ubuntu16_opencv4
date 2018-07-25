@@ -3,9 +3,7 @@ MAINTAINER Amy Tabb
 
 RUN git clone https://github.com/opencv/opencv.git
 
-RUN /bin/sh build_opencv.sh
 
-RUN cd ../..
 
 RUN cd opencv
 RUN mkdir build
@@ -18,5 +16,7 @@ RUN make -j4
 RUN make install
 
 RUN ldconfig
+
+RUN cd ../..
 
 #do not remove directory, because will use this image for building the contrib module as well.

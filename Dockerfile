@@ -9,7 +9,7 @@ WORKDIR opencv
 
 RUN mkdir build
 
-WORKDIR opencv/build
+WORKDIR build
 
 RUN /bin/sh ./../../build_opencv.sh
 

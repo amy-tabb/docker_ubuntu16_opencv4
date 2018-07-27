@@ -3,13 +3,15 @@ MAINTAINER Amy Tabb
 
 RUN git clone https://github.com/opencv/opencv.git
 
-ADD build_opencv.sh /build_opencv.sh
+COPY build_opencv.sh /build_opencv.sh
 
-RUN mkdir opencv/build
+WORKDIR opencv 
 
-WORKDIR opencv/build
+RUN mkdir build
 
-RUN /bin/sh ./../../build_opencv.sh
+#WORKDIR opencv/build
 
-WORKDIR /
+#RUN /bin/sh ./../../build_opencv.sh
+
+#WORKDIR /
 #do not remove directory, because will use this image for building the contrib module as well.

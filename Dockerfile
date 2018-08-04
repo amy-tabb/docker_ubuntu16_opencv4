@@ -5,11 +5,7 @@ RUN git clone https://github.com/opencv/opencv.git
 
 COPY build_opencv.sh /build_opencv.sh
 
-WORKDIR opencv 
-
-RUN mkdir build
-
-WORKDIR build
+WORKDIR /opencv/build 
 
 RUN /bin/sh ./../../build_opencv.sh
 
